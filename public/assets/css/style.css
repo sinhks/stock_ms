@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&display=swap');
+*{
+    font-family: "Noto Sans Khmer", sans-serif;
+   
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;  
+}
+
+/* Container for sidebar */
+
+.sidebar {
+    position: fixed; /* Fixes sidebar position */
+    top: 5;
+    left: 0;
+    width: 255px; /* Sidebar width */
+    height: 100vh; /* Full height */
+    background-color: #111; /* Background color */
+    color: white; /* Text color */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Adds shadow to the right */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+.sub-menu{
+           
+    display: none;
+}
+
+.sub-menu .arrow{
+    display: block;
+}
+li.showMenu .sub-menu{
+    display: block;
+}
+
+.font-bx{
+    font-size: 100px; 
+}
+.shadow-box{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.arrow{
+    cursor: pointer;
+}
+.iocn-link:hover{
+    background-color: rgb(107, 104, 104);
+}
+.magin-right{
+    margin-right: 20px;
+}
+.wid{
+    width: 30%;
+}
+.wid-box2{
+    width: 60%;
+}
+.sidebar a{
+    color: white;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  /* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Narrower sidebar for tablets */
+    }
+
+    .main-content {
+        margin-left: 200px; /* Adjusted margin for narrower sidebar */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%; /* Full-width sidebar for mobile */
+        height: auto; /* Adjust height for mobile */
+        position: relative; /* Remove fixed positioning for mobile */
+        top: 0; /* Reset top */
+    }
+
+    .main-content {
+        margin-left: 0; /* No margin for main content on mobile */
+    }
+}
+
+/* Hamburger menu for small screens */
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    position: absolute; /* Position it relative to the sidebar */
+    top: 10px; /* Adjust to your preference */
+    left: 10px; /* Adjust to your preference */
+    /* Same color as sidebar */
+    color: green;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Ensure it's on top */
+}
+
+@media (max-width: 576px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar initially */
+    }
+
+    .sidebar.active {
+        display: block;
+         /* Show sidebar when active */
+    }
+    .sidebar.sidebar.active {
+        display: block;
+         /* Show sidebar when active */
+    }
+}
